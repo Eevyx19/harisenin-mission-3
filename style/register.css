@@ -1,0 +1,407 @@
+@import url('global.css');
+
+body {
+    background-image: url("../images/bg-register.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: var(--container-box);
+    width: 90%;
+    max-width: 529px;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.logo img {
+    width: 28px;
+    height: 24px;
+}
+
+.logo p {
+    color: var(--primary-text);
+    font-family: 'Londrina Solid';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 110%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: var(--primary-text);
+    line-height: 140%;
+    letter-spacing: 0.2px;
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 140%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    color: var(--primary-text);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+.form-group input {
+    width: 100%;
+    font-size: 9px;
+    font-weight: 400;
+    padding: 8px 11px;
+
+    border: 0.58px solid var(--outline-border);
+    border-radius: 12px;
+    background-color: transparent;
+
+}
+
+.form-group .form-password {
+    position: relative;
+}
+
+.form-group input::placeholder {
+    color: var(--secondary-text);
+    font-size: 9px;
+    letter-spacing: 0.2px;
+}
+
+.form-group img {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.other-action {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    padding-top: 2px;
+    color: var(--secondary-text);
+}
+
+.other-action a {
+    text-decoration: none;
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+.form-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+
+    color: var(--disable-text);
+    font-size: 10px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+}
+
+.form-action button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    color: var(--primary-text);
+    background-color: transparent;
+    padding: 8px 11px;
+
+    border: 0.58px solid var(--outline-border);
+    border-radius: 12px;
+}
+
+.form-action .submit {
+    color: var(--primary-text);
+    background-color: var(--extra-background);
+}
+
+.form-action img {
+    width: 14px;
+    height: 14px;
+}
+
+/* mobile large */
+@media (min-width: 576px) {
+    main {
+        border-radius: 10px;
+        padding: 28px;
+        gap: 25px;
+    }
+
+    .logo img {
+        width: 34px;
+        height: 30px;
+    }
+
+    .logo p {
+        font-size: 35px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    form {
+        gap: 25px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input {
+        font-size: 10px;
+
+        padding: 10px 14px;
+
+        border-radius: 16px;
+
+    }
+
+    .form-group input::placeholder {
+        font-size: 12px;
+    }
+
+    .form-group img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .other-action {
+        font-size: 12px;
+    }
+
+    .form-action button {
+        gap: 14px;
+        font-size: 12px;
+        padding: 10px 14px;
+
+        border-radius: 16px;
+    }
+
+
+    .form-action img {
+        width: 16px;
+        height: 16px;
+    }
+
+}
+
+/* tablet */
+@media (min-width: 768px) {
+    main {
+        border-radius: 12px;
+        padding: 32px;
+        gap: 30px;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 34px;
+    }
+
+    .logo p {
+        font-size: 40px;
+    }
+
+    .header {
+        gap: 6px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    form {
+        gap: 30px;
+    }
+
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        font-size: 12px;
+
+        padding: 12px 17px;
+
+        border-radius: 20px;
+
+    }
+
+    .form-group input::placeholder {
+        font-size: 14px;
+    }
+
+    .form-group img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .other-action {
+        font-size: 14px;
+    }
+
+    .form-action {
+        gap: 6px;
+
+        font-size: 12px;
+    }
+
+    .form-action button {
+        gap: 16px;
+        font-size: 14px;
+
+        padding: 12px 17px;
+
+        border-radius: 20px;
+    }
+
+    .form-action img {
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+/* dekstop */
+@media (min-width: 1024px) {
+    main {
+        border-radius: 16px;
+        padding: 40px;
+        gap: 37px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 46px;
+    }
+
+    .logo p {
+        font-size: 50px;
+    }
+
+    .header {
+        gap: 8px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    form {
+        gap: 37px;
+    }
+
+    .form-group {
+        gap: 6px;
+    }
+
+    .form-group label {
+        font-size: 18px;
+    }
+
+    .form-group input {
+        font-size: 16px;
+
+        padding: 14px 20px;
+
+        border-radius: 24px;
+
+    }
+
+    .form-group input::placeholder {
+        font-size: 16px;
+    }
+
+    .form-group img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .other-action {
+        font-size: 16px;
+    }
+
+    .form-action {
+        gap: 8px;
+
+        font-size: 14px;
+    }
+
+    .form-action button {
+        gap: 20px;
+
+        font-size: 16px;
+
+        padding: 14px 20px;
+
+        border-radius: 24px;
+    }
+
+    .form-action img {
+        width: 20px;
+        height: 20px;
+    }
+
+}
