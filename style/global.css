@@ -10,10 +10,17 @@
 
 :root {
     --container-box : rgba(24, 26, 28, 0.84);
+    --page-background: rgba(24, 26, 28, 1);
     --body-background: rgba(47, 51, 52, 1);
     --extra-background: rgba(61, 65, 66, 1);
     --primary-text: rgba(255, 255, 255, 1);
     --secondary-text: rgba(193, 194, 196, 1);
     --disable-text: rgba(157, 158, 161, 1);
     --outline-border: rgba(231, 227, 252, 0.23);
+
+    --primary-default: rgba(50, 84, 255, 1);
+    --primary-100: rgba(36, 63, 219, 1);
+    --primary-200: rgba(25, 45, 183, 1);
+    --primary-300: rgba(15, 30, 147, 1);
+    --primary-400: rgba(9, 20, 122, 1);
 }

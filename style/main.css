@@ -1,0 +1,107 @@
+@import url('global.css');
+
+body {
+    background-color: var(--page-background);
+    color: var(--primary-text);
+}
+
+header {
+    font-size: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-nav span {
+    display: none;
+}
+
+.logo {
+    width: 20px;
+    height: 18px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    position: relative;
+}
+
+
+.profile-img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.arrow-img {
+    width: 14px;
+    height: 14px;
+}
+
+.dropdown-menu {
+    display: none;
+    padding: 4px;
+
+    border-radius: 4px;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 999;
+
+    list-style: none;
+
+}
+
+.profile:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-wrap: nowrap;
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.dropdown-menu a:hover {
+    color: var(--primary-default);
+}
+
+.hero-section {
+    background-image: url("../images//main/hero.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 225px;
+}
