@@ -5,8 +5,18 @@ body {
     color: var(--primary-text);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* #region NAVBAR */
 header {
     font-size: 10px;
+    line-height: 140%;
+    font-weight: 500;
+    letter-spacing: 0.2px;
 }
 
 nav {
@@ -33,6 +43,7 @@ nav {
 
 .navbar-menu {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 12px;
 }
@@ -64,7 +75,7 @@ nav {
 
 .dropdown-menu {
     display: none;
-    padding: 4px;
+    padding: 4px 0;
 
     border-radius: 4px;
 
@@ -75,6 +86,7 @@ nav {
 
     list-style: none;
 
+    background-color: var(--page-background);
 }
 
 .profile:hover .dropdown-menu {
@@ -88,6 +100,7 @@ nav {
 .dropdown-menu a {
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 5px;
     text-wrap: nowrap;
     text-decoration: none;
@@ -98,10 +111,741 @@ nav {
     color: var(--primary-default);
 }
 
+/* #endregion */
+
+/* #region HERO SECTION */
 .hero-section {
-    background-image: url("../images//main/hero.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--page-background)), url("../images//main/hero.png");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    padding: 0 20px;
     width: 100%;
     height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 12px;
+}
+
+.hero-section .hero-description {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+}
+
+.hero-section .hero-description h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.hero-section .hero-description p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.banner-action {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.button-action {
+    display: flex;
+    gap: 8px;
+}
+
+.button-action button {
+    padding: 4px 12px;
+
+    color: var(--primary-text);
+    font-size: 12px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 48px;
+}
+
+.button-action .play-btn {
+    background-color: var(--primary-300);
+}
+
+.button-action .detail-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    background-color: var(--paper-background);
+}
+
+.button-action .detail-btn span {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.button-action .detail-btn i {
+    font-size: 10px;
+}
+
+.button-action .rating {
+    color: var(--secondary-text);
+    padding: 4px;
+    border: 1px solid var(--secondary-text);
+    border-radius: 24px;
+}
+
+.banner-action .mute-btn {
+    background-color: transparent;
+    color: var(--secondary-text);
+    padding: 4px;
+    border: 1px solid var(--secondary-text);
+    border-radius: 19px;
+}
+
+.banner-action .mute-btn i {
+    font-size: 12px;
+}
+
+/* #endregion */
+
+/* #region COUNTINUE WATCHING */
+.continue-watching {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.countinue-watching h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.container-slider {
+    position: relative;
+}
+
+.container-slider button {
+    display: none;
+    color: var(--primary-text);
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid var(--outline-border);
+    border-radius: 100%;
+    background-color: var(--body-background);
+}
+
+.prev-btn {
+    position: absolute;
+    top: 40%;
+    left: -20px;
+    z-index: 99;
+}
+
+.next-btn {
+    position: absolute;
+    top: 40%;
+    right: -20px;
+    z-index: 99;
+}
+
+.movie-list {
+    display: flex;
+    gap: 16px;
+
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.movie-list::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-item {
+    list-style: none;
+}
+
+.movie-card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.movie-card a {
+    color: var(--primary-text);
+    text-decoration: none;
+}
+
+.movie-poster-wrapper {
+    position: relative;
+    width: 309px;
+    height: 151px;
+}
+
+.movie-poster-wrapper img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6));
+    width: 100%;
+    height: 100%;
+}
+
+.movie-info {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+}
+
+.movie-info h3 {
+    color: var(--primary-text);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+}
+
+.movie-badge {
+    color: var(--primary-text);
+    font-size: 10px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+}
+
+.badge-new-episode {
+    position: absolute;
+    z-index: 999;
+    top: 8%;
+    left: 5%;
+
+    font-weight: 700;
+
+    border: 0.5px solid var(--primary-300);
+    border-radius: 12px;
+    background-color: var(--primary-300);
+    padding: 4px 6px;
+}
+
+.badge-top {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+
+    font-weight: 400;
+
+    background-color: var(--error-pressed);
+    padding: 4px;
+}
+
+/* #endregion */
+
+/* Mobile large */
+@media (min-width: 576px) {
+
+    /* #region NAVBAR */
+    header {
+        font-size: 12px;
+    }
+
+    nav {
+        padding: 10px 40px;
+    }
+
+    .navbar-nav {
+        gap: 25px;
+    }
+
+    .navbar-menu {
+        gap: 25px;
+    }
+
+    .logo {
+        width: 24px;
+        height: 22px;
+    }
+
+    .profile {
+        gap: 4px;
+    }
+
+    .profile-img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .arrow-img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .dropdown-menu a {
+        gap: 6px;
+    }
+
+    /* #endregion */
+
+    /* #region HERO SECTION */
+    .hero-section {
+        height: 340px;
+
+        padding: 0 40px;
+
+        gap: 20px;
+    }
+
+    .hero-section .hero-description {
+        gap: 16px;
+    }
+
+    .hero-section .hero-description h1 {
+        font-size: 32px;
+        line-height: 110%;
+    }
+
+    .hero-section .hero-description p {
+        font-size: 14px;
+
+    }
+
+    .banner-action {
+        font-size: 14px;
+
+        margin-bottom: 40px;
+    }
+
+    .button-action button {
+        padding: 8px 26px;
+
+        font-size: 14px;
+
+    }
+
+    .button-action .detail-btn i {
+        font-size: 16px;
+    }
+
+    .button-action .rating {
+        padding: 6px;
+    }
+
+    .banner-action .mute-btn {
+        padding: 6px;
+
+        border-radius: 24px;
+    }
+
+    .banner-action .mute-btn i {
+        font-size: 16px;
+    }
+
+    /* #endregion */
+
+    /* #region COUNTINUE WATCHING */
+    .continue-watching {
+        gap: 24px;
+        padding: 20px 40px;
+    }
+
+    .countinue-watching h2 {
+        font-size: 24px;
+    }
+
+    .movie-list {
+        gap: 20px;
+    }
+
+    .movie-card {
+        border-radius: 6px;
+    }
+
+    .movie-poster-wrapper {
+        position: relative;
+        width: 307px;
+        height: 158px;
+    }
+
+    .movie-badge {
+        font-size: 12px;
+    }
+
+    /* #endregion */
+
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+
+    main {
+        gap: 0;
+    }
+
+    /* #region NAVBAR */
+    header {
+        font-size: 14px;
+    }
+
+    nav {
+        padding: 15px 60px;
+    }
+
+    .navbar-nav {
+        gap: 40px;
+    }
+
+    .navbar-menu {
+        gap: 40px;
+    }
+
+    .navbar-nav a {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 4px;
+
+        color: var(--primary-text);
+        text-decoration: none;
+    }
+
+    .logo {
+        width: 26px;
+        height: 24px;
+    }
+
+    .navbar-nav span {
+        display: block;
+        font-family: 'Londrina Solid', sans-serif;
+        font-size: 24px;
+        line-height: 110%;
+    }
+
+    .profile-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrow-img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .dropdown-menu a {
+        gap: 8px;
+    }
+
+    /* #endregion */
+
+    /* #region HERO SECTION */
+    .hero-section {
+        height: 480px;
+
+        padding: 0 60px;
+
+        gap: 30px;
+    }
+
+    .hero-section .hero-description {
+        gap: 20px;
+    }
+
+    .hero-section .hero-description h1 {
+        font-size: 40px;
+        line-height: 110%;
+    }
+
+    .hero-section .hero-description p {
+        font-size: 16px;
+
+        display: block;
+    }
+
+    .banner-action {
+        font-size: 16px;
+
+        margin-bottom: 60px;
+    }
+
+    .button-action {
+        gap: 10px;
+    }
+
+    .button-action button {
+        padding: 8px 26px;
+
+        font-size: 16px;
+
+    }
+
+    .button-action .detail-btn {
+        gap: 10px;
+
+    }
+
+    .button-action .detail-btn i {
+        font-size: 18px;
+    }
+
+    .button-action .rating {
+        padding: 8px;
+    }
+
+    .banner-action .mute-btn {
+        padding: 8px;
+
+        border-radius: 24px;
+    }
+
+    .banner-action .mute-btn i {
+        font-size: 18px;
+    }
+
+    /* #endregion */
+
+    /* #region COUNTINUE WATCHING */
+    .continue-watching {
+        gap: 28px;
+        padding: 30px 60px;
+    }
+
+    .countinue-watching h2 {
+        font-size: 28px;
+    }
+
+    .container-slider button {
+        display: block;
+    }
+
+    .movie-list {
+        gap: 24px;
+    }
+
+    .movie-card {
+        border-radius: 7px;
+    }
+
+    .movie-poster-wrapper {
+        position: relative;
+        width: 305px;
+        height: 158px;
+    }
+
+    .movie-info {
+        font-size: 14px;
+    }
+
+    .movie-info h3 {
+        font-size: 16px;
+        line-height: 120%;
+    }
+
+    .movie-badge {
+        font-size: 14px;
+    }
+
+    .badge-new-episode {
+        border-radius: 24px;
+        border: 1px;
+
+        padding: 4px 10px;
+    }
+
+    .badge-top {
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+
+        padding: 4px;
+    }
+
+    /* #endregion */
+
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+    /* #region NAVBAR */
+    header {
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 25px 80px;
+    }
+
+    .navbar-nav {
+        gap: 80px;
+    }
+
+    .navbar-menu {
+        gap: 80px;
+    }
+
+    .navbar-nav a {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 26px;
+    }
+
+    .navbar-nav span {
+        font-size: 32px;
+    }
+
+    .profile {
+        gap: 8px;
+    }
+
+    .profile-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .arrow-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .dropdown-menu {
+        padding: 4px;
+
+        border-radius: 8px;
+    }
+
+    .dropdown-menu li {
+        padding: 16px 24px;
+    }
+
+    .dropdown-menu a {
+        gap: 10px;
+    }
+
+    /* #endregion */
+
+    /* #region HERO SECTION */
+    .hero-section {
+        height: 587px;
+
+        padding: 0 80px;
+
+        gap: 40px;
+    }
+
+    .hero-section .hero-description {
+        gap: 20px;
+
+        width: 660px;
+    }
+
+    .hero-section .hero-description h1 {
+        font-size: 48px;
+        line-height: 110%;
+    }
+
+    .hero-section .hero-description p {
+        font-size: 18px;
+
+    }
+
+    .banner-action {
+        font-size: 16px;
+
+        margin-bottom: 80px;
+    }
+
+    .button-action {
+        gap: 10px;
+    }
+
+    .button-action button {
+        padding: 10px 28px;
+
+        font-size: 16px;
+
+    }
+
+    .button-action .detail-btn i {
+        font-size: 20px;
+    }
+
+    .button-action .rating {
+        padding: 10px;
+    }
+
+    .banner-action .mute-btn {
+        padding: 10px;
+
+        border-radius: 24px;
+    }
+
+    .banner-action .mute-btn i {
+        font-size: 18px;
+    }
+
+    /* #endregion */
+
+    /* #region COUNTINUE WATCHING */
+    .continue-watching {
+        gap: 32px;
+        padding: 40px 80px;
+    }
+
+    .countinue-watching h2 {
+        font-size: 32px;
+        line-height: 110%;
+    }
+
+    .movie-list {
+        gap: 24px;
+    }
+
+    .movie-card {
+        border-radius: 8px;
+    }
+
+    .movie-poster-wrapper {
+        position: relative;
+        width: 302px;
+        height: 162px;
+    }
+
+    /* #endregion */
 }

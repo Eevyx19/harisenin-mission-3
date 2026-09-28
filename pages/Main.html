@@ -14,10 +14,14 @@
 </head>
 
 <body>
+
+    <!-- Header Section -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Menu Utama">
             <div class="navbar-nav">
-                <a href="#"><img src="../images/Logo.png" alt="chill app logo" class="logo" /><span>CHILL</span></a>
+                <a href="#" aria-label="CHILL Beranda"><img src="../images/Logo.png" alt="Chill Logo" class="logo" />
+                    <span>CHILL</span>
+                </a>
                 <ul class="navbar-menu">
                     <li><a href="#">Series</a></li>
                     <li><a href="#">Film</a></li>
@@ -25,19 +29,124 @@
                 </ul>
             </div>
             <div class="profile">
-                <img src="../images/main/profil.png" class="profile-img" alt="profile picture">
-                <i class="fa-solid fa-chevron-down"></i>
+                <img src="../images/main/profil.png" class="profile-img" alt="Foto Profil">
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 <ul class="dropdown-menu">
-                    <li><a href="#"><i class="fa-solid fa-user"></i>Profil saya</a></li>
-                    <li><a href="#"><i class="fa-solid fa-star"></i>Ubah Premium</a></li>
-                    <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Keluar</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user" aria-hidden="true"></i>Profil saya</a></li>
+                    <li><a href="#"><i class="fa-solid fa-star" aria-hidden="true"></i>Ubah Premium</a></li>
+                    <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>Keluar</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <section class="hero-section">
-            
+        <!-- Hero Section -->
+        <section class="hero-section" aria-label="Sorotan film utama">
+            <div class="hero-description">
+                <h1>Duty After School</h1>
+                <p>Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai
+                    merekrut lebih banyak
+                    tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam
+                    perang.
+                </p>
+            </div>
+            <div class="banner-action">
+                <div class="button-action">
+                    <button class="play-btn">Mulai</button>
+                    <button class="detail-btn">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <span>Selengkapnya</span>
+                    </button>
+                    <data value="R18" class="rating">18+</data>
+                </div>
+                <button class="mute-btn" aria-label="Aktifkan suara">
+                    <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Countinue Watch -->
+        <section class="continue-watching" aria-labelledby="title-continue">
+            <h2>Melanjutkan Tonton Film</h2>
+            <div class="container-slider">
+                <ul class="movie-list">
+                    <button class="prev-btn" aria-label="Gulir sebelumnya">
+                        <span class="icon" aria-hidden="true"><i class="fa-solid fa-arrow-left"></i></span>
+                    </button>
+                    <button class="next-btn" aria-label="Gulir selanjutnya">
+                        <span class="icon" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <li class="movie-item">
+                        <article class="movie-card">
+                            <a href="#">
+                                <figure class="movie-poster-wrapper">
+                                    <img src="../images/main/Dont look up.png" alt="Poster film Don't Look Up">
+                                    <figcaption class="movie-info">
+                                        <h3>Don't Look Up</h3>
+                                        <div class="movie-rating" aria-label="Rating: 4.5 dari 5 bintang">
+                                            <span class="star-icon" aria-hidden="true">&#9733;</span> 4.5/5
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="movie-item">
+                        <article class="movie-card">
+                            <a href="#">
+                                <figure class="movie-poster-wrapper">
+                                    <img src="../images/main/All of us are dead.png"
+                                        alt="Poster film All Of Us Are Dead">
+                                    <figcaption class="movie-info">
+                                        <h3>All Of Us Are Dead</h3>
+                                        <div class="movie-rating" aria-label="Rating: 4.2 dari 5 bintang">
+                                            <span class="star-icon" aria-hidden="true">&#9733;</span> 4.2/5
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="movie-item">
+                        <article class="movie-card">
+                            <a href="#">
+                                <figure class="movie-poster-wrapper">
+                                    <div class="movie-badge">
+                                        <span class="badge-new-episode">Episode Baru</span>
+                                        <!-- <div class="badge-top">
+                                            <span>Top</span>
+                                            <span>10</span>
+                                        </div> -->
+                                    </div>
+                                    <img src="../images/main/Blue lock.png" alt="Poster film Blue Lock">
+                                    <figcaption class="movie-info">
+                                        <h3>Blue Lock</h3>
+                                        <div class="movie-rating" aria-label="Rating: 4.6 dari 5 bintang">
+                                            <span class="star-icon" aria-hidden="true">&#9733;</span> 4.6/5
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="movie-item">
+                        <article class="movie-card">
+                            <a href="#">
+                                <figure class="movie-poster-wrapper">
+                                    <img src="../images/main/A man called otto.png" alt="Poster film A Man Called Otto">
+                                    <figcaption class="movie-info">
+                                        <h3>A Man Called Otto</h3>
+                                        <div class="movie-rating" aria-label="Rating: 4.4 dari 5 bintang">
+                                            <span class="star-icon" aria-hidden="true">&#9733;</span> 4.4/5
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 </body>
