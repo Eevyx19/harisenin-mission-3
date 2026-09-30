@@ -681,13 +681,13 @@ nav {
 
     /* #endregion */
 
-    /* #region MOVIE CARD POTRAIT */
+    /* #region CONTINUE WATCH */
     .continue-watching {
         gap: 24px;
         padding: 20px 40px;
     }
 
-    .countinue-watching h2 {
+    .continue-watching h2 {
         font-size: 24px;
     }
 
@@ -887,7 +887,7 @@ nav {
         padding: 30px 60px;
     }
 
-    .countinue-watching h2 {
+    .continue-watching h2 {
         font-size: 28px;
     }
 
@@ -1128,13 +1128,13 @@ nav {
 
     /* #endregion */
 
-    /* #region MOVIE CARD POTRAIT */
+    /* #region CONTINUE WATCHING */
     .continue-watching {
         gap: 32px;
         padding: 40px 80px;
     }
 
-    .countinue-watching h2 {
+    .continue-watching h2 {
         font-size: 32px;
         line-height: 110%;
     }
