@@ -54,6 +54,10 @@ nav {
     color: var(--primary-text);
 }
 
+.navbar-menu a:hover {
+    color: var(--primary-default);
+}
+
 .profile {
     display: flex;
     align-items: center;
@@ -187,10 +191,16 @@ nav {
 
     border: none;
     border-radius: 48px;
+
+    cursor: pointer;
 }
 
 .button-action .play-btn {
     background-color: var(--primary-300);
+}
+
+.button-action .play-btn:hover {
+    background-color: var(--primary-default);
 }
 
 .button-action .detail-btn {
@@ -224,6 +234,8 @@ nav {
     padding: 4px;
     border: 1px solid var(--secondary-text);
     border-radius: 19px;
+
+    cursor: pointer;
 }
 
 .banner-action .mute-btn i {
